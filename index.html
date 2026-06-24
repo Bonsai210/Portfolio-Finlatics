@@ -23,49 +23,76 @@
       </nav>
     </header>
 
-    <section id="hero" class="min-h-screen flex items-center justify-center px-6">
-      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section id="hero" class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/50 to-slate-950 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(34,211,238,0.12),transparent_55%)] pointer-events-none"></div>
+
+      <div class="relative max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-16">
         <div>
-          <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+          <p class="text-cyan-400 text-sm font-semibold tracking-widest uppercase mb-4">
+            Welcome to my portfolio
+          </p>
+
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-5">
             Hi, I'm <span class="text-cyan-400">KARAN KHATRI</span>
           </h1>
 
-          <p class="text-cyan-400 text-xl font-medium mb-4">
-            Frontend Web Developer | Aspiring Full Stack Developer
+          <p class="text-xl md:text-2xl font-semibold text-white mb-6">
+            Aspiring AI Full Stack Developer
           </p>
 
-          <p class="text-slate-300 text-lg mb-8">
-            Passionate about building modern, responsive, and user-friendly web experiences while continuously learning new technologies.
+          <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-xl">
+            Passionate about building modern web applications, exploring AI technologies, and continuously learning through real-world projects.
           </p>
 
-          <div class="flex gap-4">
-            <a href="#projects" class="bg-cyan-400 text-black px-6 py-3 rounded-xl font-semibold">
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#projects"
+              class="bg-cyan-400 text-slate-950 px-6 py-3 rounded-xl font-semibold shadow-lg shadow-cyan-400/25 transition hover:bg-cyan-300"
+            >
               View Projects
             </a>
 
-            <a href="#contact" class="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-xl">
+            <a
+              href="#contact"
+              class="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-xl font-semibold transition hover:bg-cyan-400/10"
+            >
               Contact Me
             </a>
           </div>
         </div>
 
         <div class="flex justify-center">
-          <img
-            src="assets/profile-placeholder.jpg"
-            alt="Profile"
-            class="w-72 h-72 object-cover rounded-full border-4 border-cyan-400 shadow-2xl"
-          />
+          <div
+            class="w-64 h-64 md:w-72 md:h-72 rounded-full border-4 border-cyan-400 bg-gradient-to-br from-slate-800 to-slate-700 shadow-2xl shadow-cyan-400/20 flex items-center justify-center"
+            aria-label="Profile photo placeholder"
+          >
+            <span class="text-slate-500 text-sm font-medium">Profile Photo</span>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="about" class="py-24 px-6 bg-slate-900">
-      <div class="max-w-5xl mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-8 text-cyan-400">About Me</h2>
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold mb-12 text-cyan-400 text-center">About Me</h2>
 
-        <p class="text-slate-300 text-lg leading-8 max-w-3xl mx-auto">
-          I am KARAN KHATRI, a Computer Science student passionate about web development and building real-world projects. I enjoy turning ideas into responsive and interactive websites while continuously improving my problem-solving skills. Currently, I am expanding my knowledge in modern web technologies and working on projects that help me grow as a developer.
-        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div class="flex justify-center">
+            <div
+              class="w-64 h-64 md:w-80 md:h-80 rounded-2xl border-2 border-cyan-400/40 bg-gradient-to-br from-slate-800 to-slate-700 shadow-xl flex items-center justify-center"
+              aria-label="Profile image placeholder"
+            >
+              <span class="text-slate-500 text-sm font-medium">Profile Image</span>
+            </div>
+          </div>
+
+          <div>
+            <p class="text-slate-300 text-lg leading-8">
+              I am KARAN KHATRI, a Computer Science student passionate about web development, AI, and building impactful digital products. I enjoy transforming ideas into responsive and user-friendly applications while continuously improving my technical and problem-solving skills.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -76,53 +103,68 @@
         </h2>
 
         <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
-            <img src="assets/project-1.png" alt="Task Manager" class="w-full h-52 object-cover" />
+          <article class="bg-slate-900 border border-slate-800 rounded-xl shadow-md overflow-hidden transition duration-300 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10 hover:-translate-y-1">
+            <div class="w-full h-48 bg-gradient-to-br from-cyan-900/40 to-slate-800 flex items-center justify-center">
+              <span class="text-cyan-400/70 text-sm font-medium">Task Manager</span>
+            </div>
 
             <div class="p-6">
               <h3 class="text-2xl font-semibold mb-3">Task Manager</h3>
 
-              <p class="text-slate-400 mb-4">
-                A productivity web application that helps users organize and manage their daily tasks efficiently.
+              <p class="text-slate-400 mb-6 leading-relaxed">
+                A productivity application that helps users organize and manage their daily tasks efficiently.
               </p>
 
-              <a href="#" class="text-cyan-400 hover:underline">
+              <a
+                href="#"
+                class="inline-block border border-cyan-400 text-cyan-400 px-4 py-2 rounded-lg text-sm font-semibold transition hover:bg-cyan-400 hover:text-slate-950"
+              >
                 View Project
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
-            <img src="assets/project-2.png" alt="AI Opportunity Radar" class="w-full h-52 object-cover" />
+          <article class="bg-slate-900 border border-slate-800 rounded-xl shadow-md overflow-hidden transition duration-300 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10 hover:-translate-y-1">
+            <div class="w-full h-48 bg-gradient-to-br from-violet-900/40 to-slate-800 flex items-center justify-center">
+              <span class="text-cyan-400/70 text-sm font-medium">AI Opportunity Radar</span>
+            </div>
 
             <div class="p-6">
               <h3 class="text-2xl font-semibold mb-3">AI Opportunity Radar</h3>
 
-              <p class="text-slate-400 mb-4">
+              <p class="text-slate-400 mb-6 leading-relaxed">
                 An AI-powered platform that discovers internships, hackathons, grants, competitions, and career opportunities.
               </p>
 
-              <a href="#" class="text-cyan-400 hover:underline">
+              <a
+                href="#"
+                class="inline-block border border-cyan-400 text-cyan-400 px-4 py-2 rounded-lg text-sm font-semibold transition hover:bg-cyan-400 hover:text-slate-950"
+              >
                 View Project
               </a>
             </div>
-          </div>
+          </article>
 
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
-            <img src="assets/project-3.png" alt="Personal Portfolio" class="w-full h-52 object-cover" />
+          <article class="bg-slate-900 border border-slate-800 rounded-xl shadow-md overflow-hidden transition duration-300 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10 hover:-translate-y-1">
+            <div class="w-full h-48 bg-gradient-to-br from-emerald-900/30 to-slate-800 flex items-center justify-center">
+              <span class="text-cyan-400/70 text-sm font-medium">Personal Portfolio</span>
+            </div>
 
             <div class="p-6">
               <h3 class="text-2xl font-semibold mb-3">Personal Portfolio</h3>
 
-              <p class="text-slate-400 mb-4">
-                A responsive portfolio website built to showcase my skills, projects, and journey as a developer.
+              <p class="text-slate-400 mb-6 leading-relaxed">
+                A responsive portfolio website built to showcase my skills, projects, and development journey.
               </p>
 
-              <a href="#" class="text-cyan-400 hover:underline">
+              <a
+                href="#"
+                class="inline-block border border-cyan-400 text-cyan-400 px-4 py-2 rounded-lg text-sm font-semibold transition hover:bg-cyan-400 hover:text-slate-950"
+              >
                 View Project
               </a>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -133,26 +175,34 @@
           Contact Me
         </h2>
 
-        <form class="space-y-6">
+        <form
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+          class="space-y-6"
+        >
           <div>
-            <label for="fullName" class="block text-sm font-medium text-slate-300 mb-2">
-              Full Name
+            <label for="name" class="block text-sm font-medium text-slate-300 mb-2">
+              Name
             </label>
             <input
-              id="fullName"
+              id="name"
+              name="name"
               type="text"
-              placeholder="Enter your full name"
+              required
+              placeholder="Enter your name"
               class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition"
             />
           </div>
 
           <div>
             <label for="email" class="block text-sm font-medium text-slate-300 mb-2">
-              Email Address
+              Email
             </label>
             <input
               id="email"
+              name="email"
               type="email"
+              required
               placeholder="Enter your email address"
               class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition"
             />
@@ -164,13 +214,18 @@
             </label>
             <textarea
               id="message"
+              name="message"
               rows="5"
+              required
               placeholder="Write your message here..."
               class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition resize-none"
             ></textarea>
           </div>
 
-          <button type="submit" class="bg-cyan-400 text-black px-6 py-3 rounded-xl font-semibold">
+          <button
+            type="submit"
+            class="w-full sm:w-auto bg-cyan-400 text-slate-950 px-8 py-3 rounded-xl font-semibold shadow-lg shadow-cyan-400/20 transition hover:bg-cyan-300"
+          >
             Send Message
           </button>
         </form>
