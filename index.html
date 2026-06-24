@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="bg-slate-950 text-white">
+    <header class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur border-b border-slate-800">
+      <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <h1 class="text-2xl font-bold text-cyan-400">MyPortfolio</h1>
+
+        <ul class="flex gap-6 text-sm md:text-base">
+          <li><a href="#hero" class="hover:text-cyan-400">Home</a></li>
+          <li><a href="#about" class="hover:text-cyan-400">About</a></li>
+          <li><a href="#projects" class="hover:text-cyan-400">Projects</a></li>
+          <li><a href="#contact" class="hover:text-cyan-400">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero" class="min-h-screen flex items-center justify-center px-6">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+            Hi, I'm <span class="text-cyan-400">KARAN KHATRI</span>
+          </h1>
+
+          <p class="text-cyan-400 text-xl font-medium mb-4">
+            Frontend Web Developer | Aspiring Full Stack Developer
+          </p>
+
+          <p class="text-slate-300 text-lg mb-8">
+            Passionate about building modern, responsive, and user-friendly web experiences while continuously learning new technologies.
+          </p>
+
+          <div class="flex gap-4">
+            <a href="#projects" class="bg-cyan-400 text-black px-6 py-3 rounded-xl font-semibold">
+              View Projects
+            </a>
+
+            <a href="#contact" class="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-xl">
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <img
+            src="assets/profile-placeholder.jpg"
+            alt="Profile"
+            class="w-72 h-72 object-cover rounded-full border-4 border-cyan-400 shadow-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 bg-slate-900">
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8 text-cyan-400">About Me</h2>
+
+        <p class="text-slate-300 text-lg leading-8 max-w-3xl mx-auto">
+          I am KARAN KHATRI, a Computer Science student passionate about web development and building real-world projects. I enjoy turning ideas into responsive and interactive websites while continuously improving my problem-solving skills. Currently, I am expanding my knowledge in modern web technologies and working on projects that help me grow as a developer.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-14 text-cyan-400">
+          Projects
+        </h2>
+
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+            <img src="assets/project-1.png" alt="Task Manager" class="w-full h-52 object-cover" />
+
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-3">Task Manager</h3>
+
+              <p class="text-slate-400 mb-4">
+                A productivity web application that helps users organize and manage their daily tasks efficiently.
+              </p>
+
+              <a href="#" class="text-cyan-400 hover:underline">
+                View Project
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+            <img src="assets/project-2.png" alt="AI Opportunity Radar" class="w-full h-52 object-cover" />
+
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-3">AI Opportunity Radar</h3>
+
+              <p class="text-slate-400 mb-4">
+                An AI-powered platform that discovers internships, hackathons, grants, competitions, and career opportunities.
+              </p>
+
+              <a href="#" class="text-cyan-400 hover:underline">
+                View Project
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+            <img src="assets/project-3.png" alt="Personal Portfolio" class="w-full h-52 object-cover" />
+
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-3">Personal Portfolio</h3>
+
+              <p class="text-slate-400 mb-4">
+                A responsive portfolio website built to showcase my skills, projects, and journey as a developer.
+              </p>
+
+              <a href="#" class="text-cyan-400 hover:underline">
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 bg-slate-900">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-12 text-cyan-400">
+          Contact Me
+        </h2>
+
+        <form class="space-y-6">
+          <div>
+            <label for="fullName" class="block text-sm font-medium text-slate-300 mb-2">
+              Full Name
+            </label>
+            <input
+              id="fullName"
+              type="text"
+              placeholder="Enter your full name"
+              class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-slate-300 mb-2">
+              Email Address
+            </label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter your email address"
+              class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition"
+            />
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-slate-300 mb-2">
+              Message
+            </label>
+            <textarea
+              id="message"
+              rows="5"
+              placeholder="Write your message here..."
+              class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition resize-none"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="bg-cyan-400 text-black px-6 py-3 rounded-xl font-semibold">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
